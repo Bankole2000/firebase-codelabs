@@ -20,7 +20,8 @@ function signIn() {
   // alert('TODO: Implement Google Sign-In');
   // TODO 1: Sign in Firebase with credential from the Google user.
   var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider);
+  firebase.auth().signInWithRedirect(provider);
+  // NOTE: Signin with Popup doesn't work on mobile device apps (e.g. facebook)
 }
 
 // Signs-out of Friendly Chat.
